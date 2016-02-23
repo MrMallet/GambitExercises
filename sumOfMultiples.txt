@@ -1,0 +1,24 @@
+; populate a list with multiples of our integer
+; sum that same list
+; add the two sums together.
+
+
+foreach  number between 0 & 10 the condition is divisible by 3 or 5 mod(%)
+or
+foreach number below limit (parameter)
+add multiple to variable(i)-- i being used in the for loop
+then add variable amount to running sum
+
+
+(let loop ((i 5))
+(print "i is " i ".\n")
+(if (> i 0) (loop (- i 1))))
+
+(let loop ((i 0))
+(print "i is " i ".\n")
+(if (< i 5) (loop (+ i 1))))
+
+
+(let loop ((i 0))
+(print "multiples of " i " are: \n")
+(if(< i 10) (loop (+ i 3))))
